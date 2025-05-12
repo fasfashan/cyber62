@@ -6,13 +6,14 @@ import { ChevronRight, ChevronDown } from "lucide-react";
 import RunningText from "./components/RunningText";
 import Carousel from "./components/Carousel";
 import WorkshopCard from "./components/WorkshopCard";
-// Workshop data
-// Workshop data for different sections
+import CommunityCard from "./components/CommunityCard";
+import CommunityCarousel from "./components/CommunityCarousel";
+import Footer from "./components/Footer";
 const latestWorkshops = [
   {
     id: 1,
     title: "Hands-On Workshop: Building Secure Systems from Scratch",
-    image: "/event-1.png",
+    image: "event-1.png",
     startDate: "28 Mar",
     endDate: "30 Mar",
     year: "2025",
@@ -23,7 +24,7 @@ const latestWorkshops = [
   {
     id: 2,
     title: "Cyber Security Workshop: Mastering Penetration Testing",
-    image: "/event-1.png",
+    image: "event-1.png",
     startDate: "28 Mar",
     endDate: "30 Mar",
     year: "2025",
@@ -34,7 +35,7 @@ const latestWorkshops = [
   {
     id: 3,
     title: "Cyber Defense Workshop",
-    image: "/event-1.png",
+    image: "event-1.png",
     startDate: "28 Mar",
     endDate: "30 Mar",
     year: "2025",
@@ -44,12 +45,11 @@ const latestWorkshops = [
   },
 ];
 
-// More workshops for upcoming events (4 items to demonstrate pagination)
 const upcomingWorkshops = [
   {
     id: 1,
     title: "Hands-On Workshop: Building Secure Systems from Scratch",
-    image: "/event-1.png",
+    image: "event-1.png",
     startDate: "28 Mar",
     endDate: "30 Mar",
     year: "2025",
@@ -60,7 +60,7 @@ const upcomingWorkshops = [
   {
     id: 2,
     title: "Cyber Security Workshop: Mastering Penetration Testing",
-    image: "/event-1.png",
+    image: "event-1.png",
     startDate: "28 Mar",
     endDate: "30 Mar",
     year: "2025",
@@ -71,7 +71,7 @@ const upcomingWorkshops = [
   {
     id: 3,
     title: "Cyber Defense Workshop",
-    image: "/event-1.png",
+    image: "event-1.png",
     startDate: "28 Mar",
     endDate: "30 Mar",
     year: "2025",
@@ -79,10 +79,44 @@ const upcomingWorkshops = [
     location: "Jakarta, Indonesia (Exact venue TBA)",
     type: "defense",
   },
+
   {
     id: 4,
     title: "Advanced Network Security Workshop",
-    image: "/event-1.png",
+    image: "event-1.png",
+    startDate: "28 Mar",
+    endDate: "30 Mar",
+    year: "2025",
+    price: "IDR 350,000",
+    location: "Jakarta, Indonesia (Exact venue TBA)",
+    type: "security",
+  },
+  {
+    id: 5,
+    title: "Advanced Network Security Workshop",
+    image: "event-1.png",
+    startDate: "28 Mar",
+    endDate: "30 Mar",
+    year: "2025",
+    price: "IDR 350,000",
+    location: "Jakarta, Indonesia (Exact venue TBA)",
+    type: "security",
+  },
+  {
+    id: 6,
+    title: "Advanced Network Security Workshop",
+    image: "event-1.png",
+    startDate: "28 Mar",
+    endDate: "30 Mar",
+    year: "2025",
+    price: "IDR 350,000",
+    location: "Jakarta, Indonesia (Exact venue TBA)",
+    type: "security",
+  },
+  {
+    id: 7,
+    title: "Advanced Network Security Workshop",
+    image: "event-1.png",
     startDate: "28 Mar",
     endDate: "30 Mar",
     year: "2025",
@@ -92,12 +126,11 @@ const upcomingWorkshops = [
   },
 ];
 
-// Only 2 workshops for happening events to demonstrate responsive behavior
 const happeningWorkshops = [
   {
     id: 1,
     title: "Hands-On Workshop: Building Secure Systems from Scratch",
-    image: "/event-1.png",
+    image: "event-1.png",
     startDate: "28 Mar",
     endDate: "30 Mar",
     year: "2025",
@@ -108,7 +141,18 @@ const happeningWorkshops = [
   {
     id: 2,
     title: "Cyber Security Workshop: Mastering Penetration Testing",
-    image: "/event-1.png",
+    image: "event-1.png",
+    startDate: "28 Mar",
+    endDate: "30 Mar",
+    year: "2025",
+    price: "IDR 350,000",
+    location: "Jakarta, Indonesia (Exact venue TBA)",
+    type: "security",
+  },
+  {
+    id: 3,
+    title: "Cyber Security Workshop: Mastering Penetration Testing",
+    image: "event-1.png",
     startDate: "28 Mar",
     endDate: "30 Mar",
     year: "2025",
@@ -121,7 +165,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="relative max-w-6xl mx-auto min-h-screen pt-28 px-4 pb-12 bg-[url('/hero-image.png')] bg-cover bg-center bg-no-repeat text-white flex items-center">
+      <main className="relative max-w-6xl mx-auto min-h-screen pt-28 px-4 pb-12 bg-[url('hero-image.png')] bg-cover bg-center bg-no-repeat text-white flex items-center">
         <div className="space-y-2 max-w-xl md:px-10">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight font-display">
             Stronger together in the digital age
@@ -149,7 +193,10 @@ function App() {
           </div>
         </div>
       </main>
-      <section className="bg-[url('/circle-bg.png')] px-4 max-w-5xl m-auto py-40  bg-cover bg-center bg-no-repeat">
+      <section
+        id="welcome"
+        className="bg-[url('circle-bg.png')] px-4 max-w-5xl m-auto py-40  bg-cover bg-center bg-no-repeat"
+      >
         <h2 className="text-lightgrey md:text-4xl text-2xl font-display text-center max-w-5xl m-auto">
           <span className="text-teal">Cyber62</span> is an IT community that
           brings together people passionate about technology and professional
@@ -165,8 +212,8 @@ function App() {
         </div>
       </section>
       <RunningText />
-      <div className=" mt-40 bg-[url('/frost-bg.png')] bg-cover bg-center bg-no-repeat ">
-        <div className="max-w-6xl  mx-auto py-8">
+      <div className=" mt-40 bg-[url('frost-bg.png')] bg-cover bg-center bg-no-repeat ">
+        <div id="events" className="max-w-6xl  mx-auto py-8">
           <h2 className="text-2xl text-white font-display px-4 mb-6">
             Latest Event
           </h2>
@@ -231,6 +278,9 @@ function App() {
           />
         </div>
       </div>
+
+      <CommunityCarousel />
+      <Footer />
     </>
   );
 }

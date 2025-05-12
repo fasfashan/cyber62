@@ -68,7 +68,7 @@ export default function RunningText() {
       </div>
 
       {/* CSS for the animation */}
-      <style jsx>{`
+      <style>{`
         @keyframes marquee {
           0% {
             transform: translateX(0);

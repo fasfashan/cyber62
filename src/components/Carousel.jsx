@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -8,11 +6,15 @@ const Carousel = ({ items, itemsPerSlide = 3, renderItem }) => {
   const [totalSlides, setTotalSlides] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(itemsPerSlide);
   const [showNavigation, setShowNavigation] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Calculate total slides based on items and items per slide
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+
+      if (mobile) {
         setItemsPerView(1);
       } else if (window.innerWidth < 1024) {
         setItemsPerView(2);
@@ -52,23 +54,45 @@ const Carousel = ({ items, itemsPerSlide = 3, renderItem }) => {
     setActiveSlide(index);
   };
 
-  // Get current visible items
-  const getCurrentItems = () => {
-    const startIndex = activeSlide * itemsPerView;
-    return items.slice(startIndex, startIndex + itemsPerView);
-  };
-
   // Check if current slide is the last slide
   const isLastSlide = activeSlide === totalSlides - 1;
 
+  // Calculate translateX for smooth sliding
+  const translateX = `-${activeSlide * 100}%`;
+
+  // Group items into slides
+  const slides = [];
+  for (let i = 0; i < items.length; i += itemsPerView) {
+    slides.push(items.slice(i, i + itemsPerView));
+  }
+
   return (
     <div className="relative">
-      {/* Carousel container */}
+      {/* Carousel container with overflow hidden */}
       <div className="overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-4 transition-all duration-500 ease-in-out">
-          {getCurrentItems().map((item) => (
-            <div key={item.id} className="w-full ">
-              {renderItem(item)}
+        <div
+          className="flex transition-transform duration-500 ease-in-out w-full"
+          style={{ transform: `translateX(${translateX})` }}
+        >
+          {slides.map((slideItems, slideIndex) => (
+            <div
+              key={slideIndex}
+              className="flex flex-nowrap gap-8 w-full flex-shrink-0 px-4"
+            >
+              {slideItems.map((item) => (
+                <div
+                  key={item.id}
+                  className={`${
+                    itemsPerView === 1
+                      ? "w-full"
+                      : itemsPerView === 2
+                      ? "w-1/2"
+                      : "w-1/3"
+                  } px-2`}
+                >
+                  {renderItem(item)}
+                </div>
+              ))}
             </div>
           ))}
         </div>
@@ -81,7 +105,9 @@ const Carousel = ({ items, itemsPerSlide = 3, renderItem }) => {
           {activeSlide > 0 && (
             <button
               onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-teal-500 text-white rounded-full p-2 shadow-lg z-10 hover:bg-teal-600 transition-colors"
+              className={`absolute top-1/2 -translate-y-1/2 bg-teal text-white rounded-full p-2 shadow-lg z-10 hover:bg-teal transition-colors ${
+                isMobile ? "left-2" : "left-0 -translate-x-1/2"
+              }`}
               aria-label="Previous slide"
             >
               <ChevronLeft size={24} />
@@ -92,7 +118,9 @@ const Carousel = ({ items, itemsPerSlide = 3, renderItem }) => {
           {!isLastSlide && (
             <button
               onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-teal-500 text-white rounded-full p-2 shadow-lg z-10 hover:bg-teal-600 transition-colors"
+              className={`absolute top-1/2 -translate-y-1/2 bg-teal text-white rounded-full p-2 shadow-lg z-10 hover:bg-teal transition-colors ${
+                isMobile ? "right-2" : "right-0 translate-x-1/2"
+              }`}
               aria-label="Next slide"
             >
               <ChevronRight size={24} />
@@ -108,7 +136,7 @@ const Carousel = ({ items, itemsPerSlide = 3, renderItem }) => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
-              activeSlide === index ? "bg-teal-500" : "bg-gray-300"
+              activeSlide === index ? "bg-teal" : "bg-gray-300"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
