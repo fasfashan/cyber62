@@ -165,7 +165,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="relative max-w-6xl mx-auto min-h-screen pt-28 px-4 pb-12 bg-[url('hero-image.png')] bg-cover bg-center bg-no-repeat text-white flex items-center">
+      <main className="relative max-w-6xl mx-auto min-h-screen pt-28 px-4 pb-12 bg-[url('/hero-image.png')] bg-cover bg-center bg-no-repeat text-white flex items-center">
         <div className="space-y-2 max-w-xl md:px-10">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight font-display">
             Stronger together in the digital age
@@ -195,7 +195,7 @@ function App() {
       </main>
       <section
         id="welcome"
-        className="bg-[url('circle-bg.png')] px-4 max-w-5xl m-auto py-40  bg-cover bg-center bg-no-repeat"
+        className="bg-[url('/circle-bg.png')] px-4 max-w-5xl m-auto py-40  bg-cover bg-center bg-no-repeat"
       >
         <h2 className="text-lightgrey md:text-4xl text-2xl font-display text-center max-w-5xl m-auto">
           <span className="text-teal">Cyber62</span> is an IT community that
@@ -212,7 +212,7 @@ function App() {
         </div>
       </section>
       <RunningText />
-      <div className=" mt-40 bg-[url('frost-bg.png')] bg-cover bg-center bg-no-repeat ">
+      <div className=" mt-40 bg-[url('/frost-bg.png')] bg-cover bg-center bg-no-repeat ">
         <div id="events" className="max-w-6xl  mx-auto py-8">
           <h2 className="text-2xl text-white font-display px-4 mb-6">
             Latest Event
