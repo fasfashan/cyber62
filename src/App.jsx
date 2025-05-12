@@ -2,7 +2,7 @@ import React from "react";
 
 import "./App.css";
 import Header from "./components/Header";
-import { ChevronRight, ChevronDown } from "lucide-react";
+import { ChevronRight, ChevronDown, ChevronUp } from "lucide-react";
 import RunningText from "./components/RunningText";
 import Carousel from "./components/Carousel";
 import WorkshopCard from "./components/WorkshopCard";
@@ -281,6 +281,12 @@ function App() {
 
       <CommunityCarousel />
       <Footer />
+      <a
+        href="#header"
+        className="rounded-full border border-teal p-1 fixed bottom-4 right-4 bg-darkblue text-teal cursor-pointer hover:bg-teal hover:text-darkblue transition-all"
+      >
+        <ChevronUp />
+      </a>
     </>
   );
 }

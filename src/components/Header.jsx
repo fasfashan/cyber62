@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="relative z-20 ">
+      <header id="header" className="relative z-20 ">
         <nav className="fixed top-0 left-0 right-0 z-30 px-4">
           <div className="max-w-5xl mx-auto mt-4 flex items-center justify-between px-8 py-4 rounded-full text-white bg-[linear-gradient(180deg,_rgba(18,25,43,0.81)_1%,_rgba(232,241,244,0.24)_150%)]">
             <img src="logo.svg" alt="Logo" />
