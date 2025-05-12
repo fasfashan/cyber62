@@ -178,7 +178,7 @@ function App() {
               Join our community <ChevronRight />
             </button>
             <button
-              onClick={() => (window.location.href = "/join")}
+              onClick={() => (window.location.href = "#events")}
               className="w-fit bg-darkblue font-semibold hover:outline-teal hover:outline transition-all hover:text-teal text-white px-6 py-2 rounded-full"
             >
               Upcoming Events
