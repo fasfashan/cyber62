@@ -12,155 +12,27 @@ import Footer from "./components/Footer";
 const latestWorkshops = [
   {
     id: 1,
-    title: "Hands-On Workshop: Building Secure Systems from Scratch",
-    image: "event-1.png",
-    startDate: "28 Mar",
-    endDate: "30 Mar",
+    title: "Dinner Networking ",
+    image: "dinner-networking.jpg",
+    startDate: "16 April",
+    endDate: "",
     year: "2025",
-    price: "IDR 350,000",
-    location: "Jakarta, Indonesia (Exact venue TBA)",
+    price: "IDR 0 (free for public)",
+    location: "Lidah Lokal - Artotel Senayan",
     type: "technology",
   },
   {
     id: 2,
-    title: "Cyber Security Workshop: Mastering Penetration Testing",
-    image: "event-1.png",
-    startDate: "28 Mar",
-    endDate: "30 Mar",
+    title: "Lunch Party Cyber 62",
+    image: "lunch-party.jpg",
+    startDate: "17 April",
     year: "2025",
-    price: "IDR 350,000",
-    location: "Jakarta, Indonesia (Exact venue TBA)",
-    type: "security",
-  },
-  {
-    id: 3,
-    title: "Cyber Defense Workshop",
-    image: "event-1.png",
-    startDate: "28 Mar",
-    endDate: "30 Mar",
-    year: "2025",
-    price: "IDR 350,000",
-    location: "Jakarta, Indonesia (Exact venue TBA)",
-    type: "defense",
-  },
-];
-
-const upcomingWorkshops = [
-  {
-    id: 1,
-    title: "Hands-On Workshop: Building Secure Systems from Scratch",
-    image: "event-1.png",
-    startDate: "28 Mar",
-    endDate: "30 Mar",
-    year: "2025",
-    price: "IDR 350,000",
-    location: "Jakarta, Indonesia (Exact venue TBA)",
-    type: "technology",
-  },
-  {
-    id: 2,
-    title: "Cyber Security Workshop: Mastering Penetration Testing",
-    image: "event-1.png",
-    startDate: "28 Mar",
-    endDate: "30 Mar",
-    year: "2025",
-    price: "IDR 350,000",
-    location: "Jakarta, Indonesia (Exact venue TBA)",
-    type: "security",
-  },
-  {
-    id: 3,
-    title: "Cyber Defense Workshop",
-    image: "event-1.png",
-    startDate: "28 Mar",
-    endDate: "30 Mar",
-    year: "2025",
-    price: "IDR 350,000",
-    location: "Jakarta, Indonesia (Exact venue TBA)",
-    type: "defense",
-  },
-
-  {
-    id: 4,
-    title: "Advanced Network Security Workshop",
-    image: "event-1.png",
-    startDate: "28 Mar",
-    endDate: "30 Mar",
-    year: "2025",
-    price: "IDR 350,000",
-    location: "Jakarta, Indonesia (Exact venue TBA)",
-    type: "security",
-  },
-  {
-    id: 5,
-    title: "Advanced Network Security Workshop",
-    image: "event-1.png",
-    startDate: "28 Mar",
-    endDate: "30 Mar",
-    year: "2025",
-    price: "IDR 350,000",
-    location: "Jakarta, Indonesia (Exact venue TBA)",
-    type: "security",
-  },
-  {
-    id: 6,
-    title: "Advanced Network Security Workshop",
-    image: "event-1.png",
-    startDate: "28 Mar",
-    endDate: "30 Mar",
-    year: "2025",
-    price: "IDR 350,000",
-    location: "Jakarta, Indonesia (Exact venue TBA)",
-    type: "security",
-  },
-  {
-    id: 7,
-    title: "Advanced Network Security Workshop",
-    image: "event-1.png",
-    startDate: "28 Mar",
-    endDate: "30 Mar",
-    year: "2025",
-    price: "IDR 350,000",
-    location: "Jakarta, Indonesia (Exact venue TBA)",
+    price: "IDR 0 (free for public)",
+    location: "Artotel Senayan - Bima Room",
     type: "security",
   },
 ];
 
-const happeningWorkshops = [
-  {
-    id: 1,
-    title: "Hands-On Workshop: Building Secure Systems from Scratch",
-    image: "event-1.png",
-    startDate: "28 Mar",
-    endDate: "30 Mar",
-    year: "2025",
-    price: "IDR 350,000",
-    location: "Jakarta, Indonesia (Exact venue TBA)",
-    type: "technology",
-  },
-  {
-    id: 2,
-    title: "Cyber Security Workshop: Mastering Penetration Testing",
-    image: "event-1.png",
-    startDate: "28 Mar",
-    endDate: "30 Mar",
-    year: "2025",
-    price: "IDR 350,000",
-    location: "Jakarta, Indonesia (Exact venue TBA)",
-    type: "security",
-  },
-  {
-    id: 3,
-    title: "Cyber Security Workshop: Mastering Penetration Testing",
-    image: "event-1.png",
-    startDate: "28 Mar",
-    endDate: "30 Mar",
-    year: "2025",
-    price: "IDR 350,000",
-    location: "Jakarta, Indonesia (Exact venue TBA)",
-    type: "security",
-  },
-];
 function App() {
   return (
     <>
@@ -174,7 +46,10 @@ function App() {
             Shaping the future cybersecurity together
           </p>
           <div className="mt-8 flex flex-col md:flex-row gap-4">
-            <button className="bg-teal flex items-center gap-1 hover:gap-3 transition-all shadow-teal shadow-xl hover:shadow-md text-darkblue w-fit px-6 py-2 rounded-full font-semibold  ">
+            <button
+              onClick={() => (window.location.href = "#community")}
+              className="bg-teal flex items-center gap-1 hover:gap-3 transition-all shadow-teal shadow-xl hover:shadow-md text-darkblue w-fit px-6 py-2 rounded-full font-semibold  "
+            >
               Join our community <ChevronRight />
             </button>
             <button
@@ -238,44 +113,10 @@ function App() {
           <h2 className="text-2xl text-white font-display px-4 mt-12 mb-6">
             Upcoming Event
           </h2>
-          <Carousel
-            items={upcomingWorkshops}
-            itemsPerSlide={3}
-            renderItem={(item) => (
-              <WorkshopCard
-                key={item.id}
-                title={item.title}
-                image={item.image}
-                startDate={item.startDate}
-                endDate={item.endDate}
-                year={item.year}
-                price={item.price}
-                location={item.location}
-                type={item.type}
-              />
-            )}
-          />
 
           <h2 className="text-2xl text-white font-display px-4 mt-12 mb-6">
             Happening Event
           </h2>
-          <Carousel
-            items={happeningWorkshops}
-            itemsPerSlide={3}
-            renderItem={(item) => (
-              <WorkshopCard
-                key={item.id}
-                title={item.title}
-                image={item.image}
-                startDate={item.startDate}
-                endDate={item.endDate}
-                year={item.year}
-                price={item.price}
-                location={item.location}
-                type={item.type}
-              />
-            )}
-          />
         </div>
       </div>
 

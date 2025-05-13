@@ -4,7 +4,7 @@ const WorkshopCard = ({
   title,
   image,
   startDate,
-  endDate,
+
   year,
   price,
   location,
@@ -47,7 +47,7 @@ const WorkshopCard = ({
             <img
               src={image || "/placeholder.svg"}
               alt={title}
-              className="w-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="w-full object-cover transition-transform duration-500 group-hover:scale-110 max-h-48"
             />
           </div>
         )}
@@ -58,7 +58,7 @@ const WorkshopCard = ({
           {title}
         </h3>
         <div className="text-grey/50 font-bold mb-2 transition-colors duration-300 group-hover:text-darkgrey">
-          {startDate} - {endDate} {year}
+          {startDate} {year}
         </div>
         <div className="font-bold mb-2 border-b border-grey pb-4 transition-colors duration-300 group-hover:text-darkblue group-hover:border-darkblue">
           {price}

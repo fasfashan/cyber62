@@ -43,6 +43,7 @@ export default function CommunityCarousel() {
           </defs>
         </svg>
       ),
+      link: "https://chat.whatsapp.com/JWOcfoa7YqK6pMFeE6BeNY",
     },
     {
       title: "Penetration Testing",
@@ -74,6 +75,7 @@ export default function CommunityCarousel() {
           />
         </svg>
       ),
+      link: "https://chat.whatsapp.com/JkZqgaSDwvh9JFzvsOw37C",
     },
     {
       title: "Red Team/ Hacking",
@@ -88,7 +90,7 @@ export default function CommunityCarousel() {
           fill="none"
           className="group-hover:[&>g>path]:fill-white"
         >
-          <g clip-path="url(#clip0_2306_782)">
+          <g clipPath="url(#clip0_2306_782)">
             <path
               d="M10.424 11.0381C13.0443 11.0381 15.241 9.20045 15.8007 6.74617H19.2183C19.5403 6.74617 19.8573 6.87743 20.0851 7.10527L21.8187 8.83887C22.059 9.0791 22.371 9.19797 22.6855 9.19797C23.0001 9.19797 23.3146 9.0791 23.5523 8.83887C24.0303 8.36089 24.0303 7.58325 23.5523 7.10527L21.8187 5.37168C21.1228 4.67576 20.1991 4.29437 19.2159 4.29437H15.7982C15.241 1.83761 13.0443 0 10.424 0C7.38034 0 4.90625 2.47657 4.90625 5.51779C4.90625 8.55902 7.38282 11.0356 10.424 11.0356V11.0381ZM10.424 2.4518C12.1155 2.4518 13.49 3.8263 13.49 5.51779C13.49 7.20929 12.1155 8.58378 10.424 8.58378C8.73255 8.58378 7.35805 7.20929 7.35805 5.51779C7.35805 3.8263 8.73255 2.4518 10.424 2.4518Z"
               fill="#06A6B2"
@@ -142,6 +144,7 @@ export default function CommunityCarousel() {
           </defs>
         </svg>
       ),
+      link: "https://chat.whatsapp.com/ExzapZTUL925VtSlyBVX1S",
     },
     {
       title: "Reverse Engineering",
@@ -156,7 +159,7 @@ export default function CommunityCarousel() {
           fill="none"
           className="group-hover:[&>g>path]:fill-white"
         >
-          <g clip-path="url(#clip0_2303_567)">
+          <g clipPath="url(#clip0_2303_567)">
             <path
               d="M41.9653 33.2111C41.3942 32.6369 40.4676 32.6369 39.8873 33.2111C39.3162 33.7853 39.3162 34.7118 39.8873 35.286L46.5952 41.9878C47.1998 42.5985 48.2084 42.559 48.7613 41.8815L65.4216 21.5118C65.9289 20.886 65.8408 19.9594 65.212 19.449C64.5831 18.9356 63.6535 19.0267 63.1461 19.6556L47.5279 38.7676L41.9714 33.2141L41.9653 33.2111Z"
               fill="#06A6B2"
@@ -200,6 +203,7 @@ export default function CommunityCarousel() {
           </defs>
         </svg>
       ),
+      link: "https://chat.whatsapp.com/Giz4z2RHCGJLZb5NX5Oyuh",
     },
     {
       title: "SOC Ops Room ",
@@ -214,10 +218,7 @@ export default function CommunityCarousel() {
           fill="none"
           className="group-hover:[&>g>path]:fill-white"
         >
-          <g
-            xmlns="http://www.w3.org/2000/svg"
-            clip-path="url(#clip0_2303_614)"
-          >
+          <g xmlns="http://www.w3.org/2000/svg" clipPath="url(#clip0_2303_614)">
             <path
               d="M52.5647 25.897C52.0003 25.897 51.541 26.3544 51.541 26.9206V34.0487C51.541 34.613 52.0003 35.0705 52.5647 35.0705C53.129 35.0705 53.5864 34.613 53.5864 34.0487V26.9206C53.5864 26.3544 53.129 25.897 52.5647 25.897Z"
               fill="#06A6B2"
@@ -246,6 +247,7 @@ export default function CommunityCarousel() {
           </defs>
         </svg>
       ),
+      link: "https://chat.whatsapp.com/JWOcfoa7YqK6pMFeE6BeNY",
     },
   ];
 
@@ -320,9 +322,12 @@ export default function CommunityCarousel() {
                 <p className="text-gray-300 group-hover:text-gray-700">
                   {card.description}
                 </p>
-                <button className="group-hover:bg-gray-800 group-hover:text-white text-sm bg-teal flex items-center gap-1 hover:gap-3 transition-all shadow-teal shadow-lg hover:shadow-md text-gray-800 w-fit px-6 py-2 rounded-full font-semibold">
+                <a
+                  href={card.link}
+                  className="group-hover:bg-gray-800 group-hover:text-white text-sm bg-teal flex items-center gap-1 hover:gap-3 transition-all shadow-teal shadow-lg hover:shadow-md text-gray-800 w-fit px-6 py-2 rounded-full font-semibold"
+                >
                   Join our community <ChevronRight />
-                </button>
+                </a>
               </div>
             ))}
           </div>

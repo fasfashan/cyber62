@@ -36,7 +36,7 @@ export default function Header() {
             </div>
 
             <button
-              onClick={() => (window.location.href = "/join")}
+              onClick={() => (window.location.href = "#community")}
               className="hidden md:block bg-darkblue font-semibold hover:outline-teal hover:outline transition-all hover:text-teal text-white px-6 py-2 rounded-full"
             >
               Join the club

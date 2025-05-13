@@ -32,7 +32,7 @@ export default function Footer() {
                     <Mail size={20} />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/company/cyber-62/"
                     className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-400 hover:border-teal hover:text-teal transition"
                   >
                     <Linkedin size={20} />
@@ -47,7 +47,7 @@ export default function Footer() {
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="#"
+                      href="#welcome"
                       className="text-gray-400 hover:text-teal transition"
                     >
                       About Us
@@ -55,7 +55,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#events"
                       className="text-gray-400 hover:text-teal transition"
                     >
                       Events
@@ -63,7 +63,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#community"
                       className="text-gray-400 hover:text-teal transition"
                     >
                       Our Community
@@ -80,7 +80,7 @@ export default function Footer() {
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="#"
+                      href="https://chat.whatsapp.com/JWOcfoa7YqK6pMFeE6BeNY"
                       className="text-gray-400 hover:text-teal transition"
                     >
                       Malware
@@ -88,7 +88,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://chat.whatsapp.com/JkZqgaSDwvh9JFzvsOw37C"
                       className="text-gray-400 hover:text-teal transition"
                     >
                       Penetration Testing
@@ -96,7 +96,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://chat.whatsapp.com/ExzapZTUL925VtSlyBVX1S"
                       className="text-gray-400 hover:text-teal-500 transition"
                     >
                       Red Team/Hacking
@@ -104,7 +104,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://chat.whatsapp.com/Giz4z2RHCGJLZb5NX5Oyuh"
                       className="text-gray-400 hover:text-teal-500 transition"
                     >
                       Reverse Engineering
@@ -112,7 +112,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://chat.whatsapp.com/JWOcfoa7YqK6pMFeE6BeNY"
                       className="text-gray-400 hover:text-teal-500 transition"
                     >
                       SOC Ops Room
