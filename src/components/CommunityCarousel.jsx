@@ -289,7 +289,7 @@ export default function CommunityCarousel() {
   return (
     <div
       id="community"
-      className="w-full bg-[url('/matrix-bg.png')] bg-center bg-cover bg-no-repeat py-20 px-4 m-auto my-20 z-10 bg-gray-900"
+      className="w-full bg-[url('/matrix-bg.png')] bg-center bg-cover bg-no-repeat py-20 px-4 m-auto my-20 z-10 "
     >
       <h2 className="text-lightgrey md:text-4xl text-2xl font-display  max-w-6xl p-4 m-auto">
         Our Community and Topics

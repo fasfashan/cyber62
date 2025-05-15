@@ -14,19 +14,13 @@ export default function Footer() {
               <div className="mt-12 mb-8">
                 <div className="flex space-x-4">
                   <a
-                    href="#"
-                    className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-400 hover:border-teal hover:text-teal transition"
-                  >
-                    <Facebook size={20} />
-                  </a>
-                  <a
-                    href="#"
+                    href="https://www.instagram.com/62cyber_id/"
                     className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-400 hover:border-teal hover:text-teal transition"
                   >
                     <Instagram size={20} />
                   </a>
                   <a
-                    href="#"
+                    href="mailto:social@nextar.id"
                     className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-400 hover:border-teal hover:text-teal transition"
                   >
                     <Mail size={20} />
@@ -67,6 +61,14 @@ export default function Footer() {
                       className="text-gray-400 hover:text-teal transition"
                     >
                       Our Community
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/faq"
+                      className="text-gray-400 hover:text-teal transition"
+                    >
+                      FAQ
                     </a>
                   </li>
                 </ul>
