@@ -93,6 +93,13 @@ export default function Header() {
                   >
                     Our Community
                   </a>
+                  <a
+                    href="/faq"
+                    className="text-lightgrey hover:text-teal transition-opacity text-xl"
+                    onClick={toggleMenu}
+                  >
+                    Our Community
+                  </a>
                   <button
                     onClick={() => (window.location.href = "/join")}
                     className="bg-darkblue font-semibold hover:outline-teal hover:outline transition-all hover:text-teal text-white px-6 py-2 rounded-full mt-4"
