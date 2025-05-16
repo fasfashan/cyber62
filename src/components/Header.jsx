@@ -19,19 +19,19 @@ export default function Header() {
 
             <div className="hidden md:flex items-center gap-8">
               <a
-                href="#welcome"
+                href="/#welcome"
                 className="text-lightgrey hover:text-teal transition-opacity"
               >
                 Welcome to Cyber62
               </a>
               <a
-                href="#events"
+                href="/#events"
                 className="text-lightgrey hover:text-teal transition-opacity"
               >
                 Events
               </a>
               <a
-                href="#community"
+                href="/#community"
                 className="text-lightgrey hover:text-teal transition-opacity"
               >
                 Our Community

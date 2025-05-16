@@ -12,23 +12,23 @@ import Footer from "./components/Footer";
 const latestWorkshops = [
   {
     id: 1,
-    title: "Dinner Networking ",
-    image: "dinner-networking.jpg",
-    startDate: "16 April",
+    title: "Lunch Party Cyber 62",
+    image: "lunch-party.jpg",
+    startDate: "17 April",
     endDate: "",
     year: "2025",
     price: "IDR 0 (free for public)",
-    location: "Lidah Lokal - Artotel Senayan",
+    location: "Arototel Senayan - Bima Room",
     type: "technology",
   },
   {
     id: 2,
-    title: "Lunch Party Cyber 62",
-    image: "lunch-party.jpg",
-    startDate: "17 April",
+    title: "Dinner Networking",
+    image: "dinner-networking.jpg",
+    startDate: "16 April",
     year: "2025",
     price: "IDR 0 (free for public)",
-    location: "Artotel Senayan - Bima Room",
+    location: "Lidah Local - Artotel Senayan",
     type: "security",
   },
 ];
@@ -145,7 +145,7 @@ function Home() {
           />
           <img
             className="mt-20 mx-auto w-3xl px-4  rounded-md"
-            src="banner.jpg"
+            src="banner.png"
             alt=""
           />
         </div>

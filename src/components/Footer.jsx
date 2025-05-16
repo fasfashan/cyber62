@@ -41,7 +41,7 @@ export default function Footer() {
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="#welcome"
+                      href="/#welcome"
                       className="text-gray-400 hover:text-teal transition"
                     >
                       About Us
@@ -49,7 +49,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#events"
+                      href="/#events"
                       className="text-gray-400 hover:text-teal transition"
                     >
                       Events
@@ -57,7 +57,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#community"
+                      href="/#community"
                       className="text-gray-400 hover:text-teal transition"
                     >
                       Our Community
