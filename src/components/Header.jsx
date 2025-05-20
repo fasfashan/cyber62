@@ -98,7 +98,7 @@ export default function Header() {
                     className="text-lightgrey hover:text-teal transition-opacity text-xl"
                     onClick={toggleMenu}
                   >
-                    Our Community
+                    FAQ
                   </a>
                   <button
                     onClick={() => (window.location.href = "/join")}
