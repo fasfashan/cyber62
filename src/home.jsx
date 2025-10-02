@@ -12,6 +12,28 @@ import Footer from "./components/Footer";
 const latestWorkshops = [
   {
     id: 1,
+    title: "UBSI x Cyber 62 ",
+    image: "Cyber 62 X UBSI Jatiwaringin.png",
+    startDate: "27 September",
+    endDate: "",
+    year: "2025",
+    price: "IDR 0 (free for public)",
+    location: "Aula UBSI Jatiwaringin",
+    type: "technology",
+  },
+  {
+    id: 2,
+    title: "Bandung Cyber Security x Cyber 62 ",
+    image: "Cyber 62 X BCS.png",
+    startDate: "6 Juli",
+    endDate: "",
+    year: "2025",
+    price: "Price: (contact to admin BCS)",
+    location: "Sans n Co Bandung",
+    type: "technology",
+  },
+  {
+    id: 3,
     title: "Lunch Party Cyber 62",
     image: "lunch-party.jpg",
     startDate: "17 April",
@@ -22,7 +44,7 @@ const latestWorkshops = [
     type: "technology",
   },
   {
-    id: 2,
+    id: 4,
     title: "Dinner Networking",
     image: "dinner-networking.jpg",
     startDate: "16 April",
@@ -35,6 +57,17 @@ const latestWorkshops = [
 const upcomingWorkshop = [
   {
     id: 1,
+    title: "Building Data Security Readiness Towards Economic Resilience",
+    image: "Cyber 62 X NCSC.png",
+    startDate: "Date: 29 - 30 Oct",
+    endDate: "",
+    year: "2025",
+    price: "Price: (Register to website)",
+    location: "Location: Bidakara Hotel Jakarta",
+    type: "technology",
+  },
+  {
+    id: 2,
     title: "Gathering Cybersecurity",
     image: "yogyakarta-gathering.jpg",
     startDate: "Date: TBA",
